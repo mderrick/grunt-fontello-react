@@ -16,8 +16,8 @@ module.exports = function(grunt) {
                 jsTplPath: './src/templates/view.tpl',
                 cssTplPath: './src/templates/css.tpl',
                 // Output paths.
-                jsOutputPath: './dist/view.js',
-                cssOutputPath: './dist/css.css'
+                jsOutputPath: './dist/components/view.js',
+                cssOutputPath: './dist/components/css.css'
             }
         }
     });

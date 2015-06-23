@@ -1,3 +1,4 @@
-dist
+dist/components
+dist/app
 node_modules
 .DS_Store
