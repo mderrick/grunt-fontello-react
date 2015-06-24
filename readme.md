@@ -1,7 +1,8 @@
 # fontello-react-component
 
 Generates a react component from a [fontello](http://fontello.com/) SVG icon.
-
+View the (very simple) demo [here](https://mderrick.github.io/fontello-react-component) 
+which is built from [this](https://github.com/mderrick/fontello-react-component/blob/master/dist/entry.js).
 
 ## Getting started
 
@@ -24,6 +25,8 @@ module.exports = function(grunt) {
 ```
 
 Then run `grunt fontello-react`.
+
+You can see a working [Gruntfile.js](https://github.com/mderrick/fontello-react-component/blob/master/Gruntfile.js) in this repository. Simply follow [these steps](https://github.com/mderrick/fontello-react-component#development) to run it.
 
 
 ### Gulp
@@ -65,16 +68,20 @@ React.render(
 );
 ```
 
-Want to see a demo? Then see below on how to run the development build.
+You can see a [demo here](https://mderrick.github.io/fontello-react-component).
+Which was built from [this](https://github.com/mderrick/fontello-react-component/blob/master/dist/entry.js) using the
+commands below.
 
 
 ## Development 
 - `npm install`
-- `npm install webpack -g`
+- `npm install grunt-cli -g`
 - `grunt`
+- `npm install webpack -g`
 - `webpack --config=webpack.default.config.js`
 
-Open the `dist/index.html`.
+Open the `dist/index.html`. Change the font in the `font` directory to generate
+another set of icons.
 
 
 ### TODO
