@@ -1,8 +1,7 @@
 {
   "name": "fontello-react-component",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Generates a react component from a Fontello SVG icon",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
