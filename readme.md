@@ -65,7 +65,7 @@ React.render(
 );
 ```
 
-Want to see a demo? Then see below o how to run the development build.
+Want to see a demo? Then see below on how to run the development build.
 
 
 ### Development 
