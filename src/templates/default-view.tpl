@@ -4,7 +4,7 @@ var React = require('react'),
 var IconComponent = React.createClass({
 
     propTypes: {
-        icon: React.PropTypes.oneOf([
+        name: React.PropTypes.oneOf([
             <% _.each(glyphs, function(i, index) { %><%= "'" + i['glyph-name'] + '\'' + (index === glyphs.length-1 ? '' : ',\n\t\t\t') %><% }); %>
         ])
     },
@@ -15,13 +15,13 @@ var IconComponent = React.createClass({
      */
     getDefaultProps: function() {
         return {
-            icon: '<%= glyphs[0]['glyph-name'] %>'
+            name: '<%= glyphs[0]['glyph-name'] %>'
         };
     },
 
     render: function () {
         return (
-            <span className={'icon ' + this.props.icon}></span>
+            <span className={'icon-' + this.props.name}></span>
         );
     }
 

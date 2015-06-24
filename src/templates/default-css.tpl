@@ -56,7 +56,7 @@
 }
 
 <% _.each(glyphs, function(i) { %>
-.<%= i['glyph-name'] %>:before {
+.icon-<%= i['glyph-name'] %>:before {
 	content: '<%= i['unicode'] %>';
 }
 <% }); %>
