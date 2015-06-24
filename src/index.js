@@ -23,8 +23,8 @@ module.exports = function(options, cb) {
         // CSS font name
         fontName: 'fontello',
         // Template paths
-        jsTplPath: './src/templates/view.tpl',
-        cssTplPath: './src/templates/css.tpl',
+        jsTplPath: './src/templates/default-view.tpl',
+        cssTplPath: './src/templates/default-css.tpl',
         // Output paths
         jsOutputPath: './dist/components/view.js',
         cssOutputPath: './dist/components/css.css'
@@ -72,21 +72,23 @@ module.exports = function(options, cb) {
      *                   { 'glyph-name': 'facebook', unicode: '\e800' }
      */
     var callback = function(glyphs) {
+        // TODO: Don't do the lazy substring hack and use `path.relative` as it is supposed to be used
+        // http://stackoverflow.com/questions/31023972/node-path-relative-returns-incorrect-path
         async.parallel([
             function() {
                 fs.writeFileSync(options.cssOutputPath, _.template(cssTpl)({
                     timestamp: new Date().getTime(),
-                    svgFontPath: path.relative(options.cssOutputPath, options.svgPath),
-                    woffFontPath: path.relative(options.cssOutputPath, options.woffPath),
-                    eotFontPath: path.relative(options.cssOutputPath, options.eotPath),
-                    ttfFontPath: path.relative(options.cssOutputPath, options.ttfPath),
+                    svgFontPath: path.relative(options.cssOutputPath, options.svgPath).substring(1),
+                    woffFontPath: path.relative(options.cssOutputPath, options.woffPath).substring(1),
+                    eotFontPath: path.relative(options.cssOutputPath, options.eotPath).substring(1),
+                    ttfFontPath: path.relative(options.cssOutputPath, options.ttfPath).substring(1),
                     fontName: options.fontName,
                     glyphs: glyphs
                 }));
             },
             function() {
                 fs.writeFileSync(options.jsOutputPath, _.template(jsTpl)({
-                    cssOutputPath: path.relative(options.jsOutputPath, options.cssOutputPath),
+                    cssOutputPath: path.relative(options.jsOutputPath, options.cssOutputPath).substring(1),
                     glyphs: glyphs
                 }));
             }

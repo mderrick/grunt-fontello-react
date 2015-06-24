@@ -1,3 +1,9 @@
+/**
+ * Interoperable CSS for use with Webpacks css-loader
+ * http://glenmaddern.com/articles/interoperable-css
+ * https://github.com/webpack/css-loader#css-modules
+ */
+
 @font-face {
   font-family: '<%= fontName %>';
   src: url('<%= eotFontPath %>?<%= timestamp %>');
@@ -9,7 +15,18 @@
   font-style: normal;
 }
 
-.icon {
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'fontello';
+    src: url('../font/fontello.svg?73179758#fontello') format('svg');
+  }
+}
+*/
+
+.icon:before {
  	font-family: "<%= fontName %>";
 	font-style: normal;
 	font-weight: normal;
@@ -45,7 +62,8 @@
 }
 
 <% _.each(glyphs, function(i) { %>
-.<%= i['glyph-name'] %> {
+.<%= i['glyph-name'] %>:before {
+	composes: icon;
 	content: '<%= i['unicode'] %>';
 }
 <% }); %>

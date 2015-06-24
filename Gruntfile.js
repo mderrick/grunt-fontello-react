@@ -13,8 +13,8 @@ module.exports = function(grunt) {
                 // CSS font name.
                 fontName: 'fontello',
                 // Template paths.
-                jsTplPath: './src/templates/view.tpl',
-                cssTplPath: './src/templates/css.tpl',
+                jsTplPath: './src/templates/default-view.tpl',
+                cssTplPath: './src/templates/default-css.tpl',
                 // Output paths.
                 jsOutputPath: './dist/components/view.js',
                 cssOutputPath: './dist/components/css.css'

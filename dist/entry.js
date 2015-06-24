@@ -2,6 +2,6 @@ var React = require('react'),
     FontelloIcon = require('./components/view.js');
 
 React.render(
-    <Icon>,
+    <FontelloIcon/>,
     document.getElementById('content')
 );
