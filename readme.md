@@ -68,7 +68,7 @@ React.render(
 Want to see a demo? Then see below on how to run the development build.
 
 
-### Development 
+## Development 
 - `npm install`
 - `npm install webpack -g`
 - `grunt`
@@ -77,7 +77,7 @@ Want to see a demo? Then see below on how to run the development build.
 Open the `dist/index.html`.
 
 
-#### TODO
+### TODO
 - [ ] Gulp task.
 - [X] Provide a template to work with webpack css modules.
 - [ ] Remove lazy substring of relative path calculation.
