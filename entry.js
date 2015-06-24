@@ -4,8 +4,12 @@ var React = require('react'),
         render: function() {
             return (
                 <div>
-                    <Icon name="stackoverflow"/>
-                    <Icon name="github-squared"/>
+                    <a href="http://stackoverflow.com/users/976497/matt-derrick" target="_blank">
+                        <Icon name="stackoverflow"/>
+                    </a>
+                    <a href="https://github.com/mderrick/" target="_blank">
+                        <Icon name="github-squared"/>
+                    </a>
                 </div>
             );
         }
