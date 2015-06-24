@@ -26,7 +26,7 @@ module.exports = function(grunt) {
 
 Then run `grunt fontello-react`.
 
-You can see a working [Gruntfile.js](https://github.com/mderrick/fontello-react-component/blob/master/Gruntfile.js) in this repository. Simply follow [these steps](https://github.com/mderrick/fontello-react-component#development) to run it.
+You can see a working [Gruntfile.js](https://github.com/mderrick/fontello-react-component/blob/master/Gruntfile.js) in this repository. Simply follow [these steps](#development) to run it.
 
 
 ### Gulp
