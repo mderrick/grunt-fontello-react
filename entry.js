@@ -1,7 +1,17 @@
 var React = require('react'),
-    FontelloIcon = require('./components/view.js');
+    Icon = require('./components/view.js'),
+    Content = React.createClass({
+		render: function() {
+			return (
+				<div>
+					<Icon name="stackoverflow"/>
+					<Icon name="github-squared"/>
+				</div>
+			);
+		}
+	});
 
 React.render(
-    <FontelloIcon/>,
+	<Content/>,
     document.getElementById('content')
 );
