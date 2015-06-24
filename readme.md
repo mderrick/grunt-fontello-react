@@ -46,7 +46,7 @@ Paths are relative to the location of your `Gruntfile.js` or `gulpfile.js`.
     jsTplPath: './src/templates/view.tpl', // React component template (to use your own)
     cssTplPath: './src/templates/css.tpl', // CSS template (to use your own)
     jsOutputPath: './dist/components/view.js', // Location of React component output
-    cssOutputPath: './dist/components/css.css' // Location od CSS output
+    cssOutputPath: './dist/components/css.css' // Location of CSS output
 }
 ```
 
