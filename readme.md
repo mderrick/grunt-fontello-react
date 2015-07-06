@@ -1,11 +1,7 @@
 # fontello-react-component
 
 Generates a react component from a [fontello](http://fontello.com/) SVG icon.
-View the (very simple) [demo here](https://mderrick.github.io/fontello-react-component) 
-which is built from [this](dist/entry.js).
-
-This is work in progress. I suspect there are a lot of issues.
-
+View the [demo here](https://mderrick.github.io/fontello-react-component).
 
 ## Getting started
 
@@ -30,11 +26,6 @@ module.exports = function(grunt) {
 Then run `grunt fontello-react`.
 
 You can see a working [Gruntfile.js](Gruntfile.js) in this repository. Simply follow [these steps](#development) to run it.
-
-
-### Gulp
-
-Gulp functionality is in progress.
 
 
 ### Options
@@ -71,11 +62,6 @@ React.render(
 );
 ```
 
-You can see a [demo here](https://mderrick.github.io/fontello-react-component).
-Which was built from [this](dist/entry.js) using the
-[commands below](#description).
-
-
 ## Templates
 
 The templates which are used to generate the output are [here](src/templates).
@@ -92,15 +78,4 @@ and is why I built this in the first place. They use [underscore](http://undersc
 - `npm install webpack -g`
 - `webpack --config=webpack.default.config.js`
 
-Open the `dist/index.html`. Replace the font in the `font` directory to generate
-another set of icons. Voila.
-
-
-### TODO
-- [ ] Gulp task.
-- [X] Provide a template to work with webpack css modules.
-- [ ] Remove lazy substring of relative path calculation.
-- [ ] Better error handling, return useful errors.
-- [ ] Tests
-- [ ] Document the available adapters (only Fontello exists for now)
-- [ ] Document the available templates
+Open the `dist/index.html`.
