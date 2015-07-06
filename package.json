@@ -5,7 +5,19 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mderrick/fontello-react-component.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mderrick/fontello-react-component/issues"
+  },
+  "homepage": "https://github.com/mderrick/fontello-react-component",
+  "author": {
+    "name": "Matt Derrick",
+    "email": "me@mattderrick.co.uk",
+    "url": "http://mattderrick.co.uk"
+  },
   "license": "ISC",
   "dependencies": {
     "async": "^1.2.1",
