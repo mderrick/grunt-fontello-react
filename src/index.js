@@ -1,7 +1,8 @@
 var fs = require('fs'),
     path = require('path'),
     _ = require('underscore'),
-    async = require('async');
+    async = require('async'),
+    mkdirp = require('mkdirp');
 
 
 module.exports = function(options, cb) {
@@ -72,6 +73,11 @@ module.exports = function(options, cb) {
      *                   { 'glyph-name': 'facebook', unicode: '\e800' }
      */
     var callback = function(glyphs) {
+        // Create directories just in case they do not exist.
+        // TODO: Do this async using async.series. Being lazy.
+        mkdirp.sync(path.dirname(options.cssOutputPath));
+        mkdirp.sync(path.dirname(options.jsOutputPath));
+
         // TODO: Don't do the lazy substring hack and use `path.relative` as it is supposed to be used
         // http://stackoverflow.com/questions/31023972/node-path-relative-returns-incorrect-path
         async.parallel([
