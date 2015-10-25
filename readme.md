@@ -1,4 +1,4 @@
-# fontello-react-component
+# grunt-fontello-react
 
 Generates a react component from a [fontello](http://fontello.com/) SVG icon.
 View the [demo here](https://mderrick.github.io/fontello-react-component).
@@ -14,12 +14,12 @@ and then use Grunt with these possible [options](#options).
 
 ```
 module.exports = function(grunt) {
+    grunt.loadNpmTasks('grunt-fontello-react');
     grunt.initConfig({
         'fontello-react': {
             options: {}
         }
     });
-    require('./tasks').grunt(grunt);
 }
 ```
 
@@ -40,8 +40,8 @@ Paths are relative to the location of your `Gruntfile.js`.
     eotPath: './font/fontello.eot', // Path to EOT
     ttfPath: './font/fontello.ttf', // Path to TTF
     fontName: 'fontello', // Font name to use in CSS 'font-style'
-    jsTplPath: './src/templates/view.tpl', // React component [template](src/templates) (to use your own)
-    cssTplPath: './src/templates/css.tpl', // CSS [template](src/templates) (to use your own)
+    jsTplPath: './src/templates/custom-js.tpl', // React component template (to use your own)
+    cssTplPath: './src/templates/custom-css.tpl', // CSS tempalte (to use your own)
     jsOutputPath: './dist/components/view.js', // Location of React component output
     cssOutputPath: './dist/components/css.css' // Location of CSS output
 }
@@ -54,7 +54,9 @@ In your application simply require the generated component.
 
 ```
 var React = require('react'),
-    Icon = require('./components/view.js');
+    Icon = require('./the/output/component.js');
+
+// CSS may need to be included seperately if using the non CSS module template.
 
 React.render(
     <Icon name="name-of-icon"/>,
@@ -66,9 +68,8 @@ React.render(
 
 The templates which are used to generate the output are [here](src/templates).
 One uses the default CSS you get in the fontello download. The other uses modified
-CSS to work with [Webpacks css-loader](https://github.com/webpack/css-loader#local-scope)
-because [interoperable CSS](http://glenmaddern.com/articles/interoperable-css) is awesome
-and is why I built this in the first place. They use [underscore](http://underscorejs.org/).
+CSS to work with [Webpacks css-loader](https://github.com/webpack/css-loader#local-scope).
+They use [underscore](http://underscorejs.org/).
 
 
 ## Development 

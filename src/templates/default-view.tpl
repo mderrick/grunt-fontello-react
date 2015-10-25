@@ -1,5 +1,4 @@
-var React = require('react'),
-    css = require('<%= cssOutputPath %>');
+var React = require('react');
 
 var IconComponent = React.createClass({
 

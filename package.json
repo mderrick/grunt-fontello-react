@@ -1,18 +1,18 @@
 {
-  "name": "fontello-react-component",
-  "version": "1.0.2",
+  "name": "grunt-fontello-react",
+  "version": "2.0.0",
   "description": "Generates a react component from a Fontello SVG icon",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/mderrick/fontello-react-component.git"
+    "url": "https://github.com/mderrick/grunt-fontello-react.git"
   },
   "bugs": {
-    "url": "https://github.com/mderrick/fontello-react-component/issues"
+    "url": "https://github.com/mderrick/grunt-fontello-react/issues"
   },
-  "homepage": "https://github.com/mderrick/fontello-react-component",
+  "homepage": "https://github.com/mderrick/grunt-fontello-react",
   "author": {
     "name": "Matt Derrick",
     "email": "me@mattderrick.co.uk",

@@ -22,9 +22,7 @@ module.exports = function(grunt) {
         }
     });
 
-    // Requiring task weirdly because I'm exporting
-    // both Gulp and Grunt tasks.
-    require('./tasks').grunt(grunt);
+    grunt.loadTasks('tasks');
 
     // By default run the task.
     grunt.registerTask('default', ['fontello-react']);

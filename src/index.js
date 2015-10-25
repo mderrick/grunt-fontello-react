@@ -24,11 +24,11 @@ module.exports = function(options, cb) {
         // CSS font name
         fontName: 'fontello',
         // Template paths
-        jsTplPath: './src/templates/default-view.tpl',
-        cssTplPath: './src/templates/default-css.tpl',
+        jsTplPath: path.join(__dirname, './templates/default-view.tpl'),
+        cssTplPath: path.join(__dirname, './templates/default-css.tpl'),
         // Output paths
-        jsOutputPath: './dist/components/view.js',
-        cssOutputPath: './dist/components/css.css'
+        jsOutputPath: path.join(__dirname, './dist/components/view.js'),
+        cssOutputPath: path.join(__dirname, './dist/components/css.css')
     };
 
     /**
@@ -53,8 +53,8 @@ module.exports = function(options, cb) {
     try {
         jsTpl = fs.readFileSync(options.jsTplPath).toString();
     } catch(e) {
-         console.log(options.jsTplPath + ' does not exist.');
-         return;
+        console.log(options.jsTplPath + ' does not exist.');
+        return;
     }
 
     /**
