@@ -1,7 +1,7 @@
 # grunt-fontello-react
 
 Generates a react component from a [fontello](http://fontello.com/) SVG icon.
-View the [demo here](https://mderrick.github.io/fontello-react-component).
+View the [demo here](https://mderrick.github.io/grunt-fontello-react).
 
 ## Getting started
 
@@ -41,7 +41,7 @@ Paths are relative to the location of your `Gruntfile.js`.
     ttfPath: './font/fontello.ttf', // Path to TTF
     fontName: 'fontello', // Font name to use in CSS 'font-style'
     jsTplPath: './src/templates/custom-js.tpl', // React component template (to use your own)
-    cssTplPath: './src/templates/custom-css.tpl', // CSS tempalte (to use your own)
+    cssTplPath: './src/templates/custom-css.tpl', // CSS template (to use your own)
     jsOutputPath: './dist/components/view.js', // Location of React component output
     cssOutputPath: './dist/components/css.css' // Location of CSS output
 }
