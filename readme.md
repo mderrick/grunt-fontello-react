@@ -17,13 +17,18 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-fontello-react');
     grunt.initConfig({
         'fontello-react': {
-            options: {}
+            target: {
+                options: {}
+            },
+            another-target: {
+                options: {}
+            }
         }
     });
 }
 ```
 
-Then run `grunt fontello-react`.
+Then run `grunt fontello-react:target`.
 
 You can see a working [Gruntfile.js](Gruntfile.js) in this repository. Simply follow [these steps](#development) to run it.
 
